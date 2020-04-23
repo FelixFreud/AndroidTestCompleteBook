@@ -1,12 +1,13 @@
 package com.foxsouls.androidtestcompletebook.c3_Applicated
 
-import androidx.test.platform.app.InstrumentationRegistry
+import android.app.Instrumentation
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
+import androidx.test.platform.app.InstrumentationRegistry
+import com.foxsouls.androidtestcompletebook.R
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 import org.assertj.core.api.Assertions.assertThatExceptionOfType
-import org.junit.Ignore
 import java.lang.IllegalArgumentException
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -22,15 +23,13 @@ class InputCheckerTest {
             .withMessage("Cannot be blank")
     }
 }
-/*
+
 @RunWith(AndroidJUnit4ClassRunner::class)
 class JetpackTest {
-    @Test
+   @Test
     fun gettingContextTest() {
-        val context = InstrumentationRegistry.getInstrumentation().context
-        val appName = context.packageName
+        val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val appName = context.getString(R.string.app_name)
         assertThat(appName).isEqualTo("AndroidTestCompleteBook")
     }
 }
-
- */
