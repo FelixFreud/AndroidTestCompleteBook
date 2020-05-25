@@ -11,7 +11,7 @@ interface RepositoryDAO {
     fun findByOwner(owner: String): List<Repository>
 }
 
-@Database(entities = [Repository::class], version = 1)
+@Database(entities = [Repository::class], version = 1, exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun repositoryDao(): RepositoryDAO
 }

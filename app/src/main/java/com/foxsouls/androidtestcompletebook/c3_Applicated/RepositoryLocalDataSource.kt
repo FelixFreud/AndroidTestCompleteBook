@@ -6,6 +6,7 @@ class RepositoryLocalDataSource(val db: AppDatabase) {
     }
 
     fun findByOwner(owner: String): List<Repository> {
-        return db.repositoryDao().findByOwner(owner)
+        val list = db.repositoryDao().findByOwner(owner)
+        return list
     }
 }
